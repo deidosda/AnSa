@@ -4,6 +4,7 @@
     <ClInclude Include="inc\nework.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test\main.cpp" />
+    <ClCompile Include="test\test_network.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
 </Project>

@@ -142,7 +142,8 @@
     <ClInclude Include="inc\nework.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test\main.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="test\test_network.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

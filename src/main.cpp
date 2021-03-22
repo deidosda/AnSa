@@ -22,8 +22,6 @@ int main() {
     io.run();*/
 
     server serv;
-    Condition cond = Condition::NEW;
-    serv.set_status(cond);
-    serv.get_status(cond);
+    std::cout << static_cast<int>(serv.cond_);// TEST
 }
 //------------------------------------------

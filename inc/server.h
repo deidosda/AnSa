@@ -28,7 +28,7 @@ public:
 
     Condition set_status(const Condition& cond);
     const Condition get_status(const Condition& cond);
-private:
+//private?
     std::string info_;
     Condition cond_;
 

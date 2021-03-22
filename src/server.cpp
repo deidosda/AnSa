@@ -10,7 +10,7 @@
 // External Library including
 #include <boost/bind/bind.hpp>
 //------------------------------------------
-server::server() : status_{Condition::NEW}
+server::server() : status_{Status::NEW}
 {
     std::cout << "Success!" << std::endl;
 }

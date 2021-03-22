@@ -13,7 +13,7 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/bind.hpp>
 //------------------------------------------
-enum class Condition {
+enum class Status {
     NEW = 0,
     IN_PROCESS = 1,
     COMPLETE = 2,
@@ -27,7 +27,7 @@ public:
     ~server();
 
   
-    Condition status_;
+    Status status_;
 
 };
 #endif SERVER_H_

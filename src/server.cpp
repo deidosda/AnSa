@@ -10,7 +10,7 @@
 // External Library including
 #include <boost/bind/bind.hpp>
 //------------------------------------------
-server::server() : cond_{Condition::NEW}
+server::server() : status_{Condition::NEW}
 {
     std::cout << "Success!" << std::endl;
 }
@@ -19,5 +19,4 @@ server::~server()
 {
     std::cout << "Server is closed" << std::endl;
 }
-
 //------------------------------------------

@@ -22,6 +22,6 @@ int main() {
     io.run();*/
 
     server serv;
-    std::cout << static_cast<int>(serv.cond_);// TEST
+    std::cout << static_cast<int>(serv.status_) << std::endl; ;// TEST
 }
 //------------------------------------------

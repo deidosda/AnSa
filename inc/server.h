@@ -26,11 +26,8 @@ public:
     server();
     ~server();
 
-    Condition set_status(const Condition& cond);
-    const Condition get_status(const Condition& cond);
-//private?
-    std::string info_;
-    Condition cond_;
+  
+    Condition status_;
 
 };
 #endif SERVER_H_

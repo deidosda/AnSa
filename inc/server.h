@@ -32,5 +32,5 @@ private:
     std::string info_;
 
 };
-#endif NETWORK_H
+#endif NETWORK_H_
 

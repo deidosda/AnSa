@@ -26,7 +26,8 @@ public:
     server();
     ~server();
 
-  
+    void set_connection();
+    
     Status status_;
 
 };

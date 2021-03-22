@@ -140,8 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="inc\network.h" />
+    <ClInclude Include="inc\server.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\server.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="test\test_network.cpp" />
   </ItemGroup>

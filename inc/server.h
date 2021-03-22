@@ -2,8 +2,8 @@
 // Author : SakhilKuliev
 //------------------------------------------
 #pragma once
-#ifndef NETWORK_H_
-#define NETWORK_H_
+#ifndef SERVER_H_
+#define SERVER_H_
 //------------------------------------------
 #include <iostream>
 #include <string>
@@ -14,23 +14,24 @@
 #include <boost/bind.hpp>
 //------------------------------------------
 enum class Condition {
-    IN_PROCESS,
-    NEW,
-    COMPLETE,
-    SEND,
-    GET,
+    NEW = 0,
+    IN_PROCESS = 1,
+    COMPLETE = 2,
+    SEND = 3,
+    GET = 4,
 };
 
 class server {
 public:
-    server(std::string str);
-
+    server();
     ~server();
 
-    const auto get_string(const std::string cond);
+    Condition set_status(const Condition& cond);
+    const Condition get_status(const Condition& cond);
 private:
     std::string info_;
+    Condition cond_;
 
 };
-#endif NETWORK_H_
-
+#endif SERVER_H_
+//------------------------------------------

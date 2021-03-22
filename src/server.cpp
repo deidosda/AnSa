@@ -6,24 +6,28 @@
 //------------------------------------------
 // Standart Library Including
 #include <iostream>
-
 //------------------------------------------
 // External Library including
 #include <boost/bind/bind.hpp>
-
 //------------------------------------------
-inline server::server(std::string str) : info_(std::move(str))
+server::server()
 {
     std::cout << "Success!" << std::endl;
 }
 //------------------------------------------
-inline server::~server()
+server::~server()
 {
     std::cout << "Server is closed" << std::endl;
 }
-//------------------------------------------
-inline const auto server::get_string(const std::string cond)
+
+// Set status from enum class for object
+Condition server::set_status(const Condition& cond)
 {
-    return this->info_;
+    return this->cond_ = cond;
+}
+// Get status from enum slass for object
+const Condition server::get_status(const Condition& cond)
+{
+    return this->cond_;
 }
 //------------------------------------------

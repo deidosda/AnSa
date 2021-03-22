@@ -2,8 +2,12 @@
 // Author : SakhilKuliev
 //------------------------------------------
 #pragma once
+#ifndef NETWORK_H_
+#define NETWORK_H_
 //------------------------------------------
 #include <iostream>
+#include <string>
+#include <algorithm>
 //------------------------------------------
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
@@ -41,3 +45,26 @@ private:
     int count_;
 };
 //------------------------------------------
+
+class server {
+public:
+    server(std::string &str) : info_(std::move(str))
+    {
+        std::cout << "Success!" << std::endl;
+    }
+
+    ~server()
+    {
+        std::cout << "Server is closed" << std::endl;
+    }
+
+    auto get_string(std::string info)
+    {
+        return this->info_;
+    }
+private:
+    std::string info_;
+    
+};
+
+#endif // !NETWORK_H

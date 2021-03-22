@@ -48,7 +48,7 @@ private:
 
 class server {
 public:
-    server(std::string &str) : info_(std::move(str))
+    server(std::string str) : info_(std::move(str))
     {
         std::cout << "Success!" << std::endl;
     }
@@ -58,7 +58,7 @@ public:
         std::cout << "Server is closed" << std::endl;
     }
 
-    auto get_string(std::string info)
+    const auto get_string(const std::string cond)
     {
         return this->info_;
     }

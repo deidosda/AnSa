@@ -22,5 +22,7 @@ class client
 
     void server_connect();
     void send_request();
+
+    Status client_status_;
 };
 #endif CLIENT_H

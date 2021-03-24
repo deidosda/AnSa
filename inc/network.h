@@ -9,10 +9,13 @@
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/bind.hpp>
 //------------------------------------------
+// namespace typedef`s
+namespace net = boost::asio;
+//------------------------------------------
 class printer
 {
 public:
-    printer(boost::asio::io_service& io)
+    printer(net::io_service& io)
         : timer_(io, boost::posix_time::seconds(1)),
         count_(0)
     {
@@ -37,7 +40,7 @@ public:
     }
 
 private:
-    boost::asio::deadline_timer timer_;
+    net::deadline_timer timer_;
     int count_;
 };
 //------------------------------------------

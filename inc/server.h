@@ -1,27 +1,35 @@
 //------------------------------------------
 // Author : SakhilKuliev
 //------------------------------------------
-// Internal including
-#include "..\inc\server.h"
-#include "..\inc\network.h"
+#pragma once
+#ifndef SERVER_H_
+#define SERVER_H_
 //------------------------------------------
-// Standart Library Including
 #include <iostream>
+#include <string>
+#include <algorithm>
 //------------------------------------------
-// External Library including
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/bind.hpp>
 //------------------------------------------
-// namespace typedef`s
-namespace net = boost::asio;
-//------------------------------------------
-int main() {
-    /*net::io_service io;
-    printer p(io);
-    io.run();*/
+enum class Status {
+    NEW = 0,
+    IN_PROCESS = 1,
+    COMPLETE = 2,
+    SEND = 3,
+    GET = 4,
+};
 
-    server serv;
-    std::cout << static_cast<int>(serv.status_) << std::endl; ;// TEST
-}
+class server {
+public:
+    server();
+    ~server();
+
+    void set_connection();
+    
+    Status status_;
+
+};
+#endif SERVER_H_
 //------------------------------------------

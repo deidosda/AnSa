@@ -23,8 +23,8 @@ struct user_data
     /*
      * name_ - client current name
      * id_   - client current id
-     * arrd_ - client current address
      * mail_ - client current mail
+     * arrd_ - client current ip address
     */
 
     std::string     name_;

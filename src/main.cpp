@@ -17,6 +17,8 @@
 // namespace typedef`s
 namespace net = boost::asio;
 //------------------------------------------
+void set_user(user_data& u_data);
+//----------------------------
 int main() {
     /*net::io_service io;
     printer p(io);
@@ -27,6 +29,8 @@ int main() {
 
     server serv;
 
+    
+
     user_data user
     {
         .name_ = {"Sakhil"},
@@ -35,8 +39,15 @@ int main() {
         .addr_ = {"191.168.0.1" },
     };
 
+    set_user(user);
+
     client demon(user);
     demon.show_information();
     serv.save_data(demon);
 }
 //------------------------------------------
+
+void set_user(user_data& u_data)
+{
+    // In release
+}

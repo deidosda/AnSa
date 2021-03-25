@@ -26,15 +26,23 @@ void server::set_connection()
 {
     
 }
+/*
+ * This function takes data from a structure that has fields in its :
+ * name_ - user current name
+ * id-   - user current id
+ * mail_ - user current mail
+ * addr_ - user current ip address
+ * We read data from these fields and send it to the database.
+*/
 void server::save_data(client& user)
 {
-    server::db.open("C:\\Users\\kobri\\source\\repos\\Ansa\\Database\\database.txt", std::ios::app);
-    
+    server::db.open("Database\\database.txt", std::ios::app);  
     db  << "------------------------------" << '\n'
         << "Name : "    << user.info.name_  << '\n'
         << "ID :"       << user.info.id_    << '\n'
         << "Mail :"     << user.info.mail_  << '\n'
         << "Address : " << user.info.addr_  << '\n'
         << "------------------------------" << '\n';
+
 }
 //------------------------------------------

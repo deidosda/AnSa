@@ -1,5 +1,5 @@
 //------------------------------------------
-// Author : SakhilKuliev
+// Author : Sakhil Kuliev
 //------------------------------------------
 #pragma once
 #ifndef SERVER_H_

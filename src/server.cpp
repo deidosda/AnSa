@@ -1,5 +1,5 @@
 //------------------------------------------
-// Author : SakhilKuliev
+// Author : Sakhil Kuliev
 //------------------------------------------
 // Internal including
 #include "..\inc\server.h"
@@ -18,5 +18,9 @@ server::server() : status_{Status::NEW}
 server::~server()
 {
     std::cout << "Server is closed" << std::endl;
+}
+void server::set_connection()
+{
+    
 }
 //------------------------------------------

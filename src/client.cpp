@@ -53,7 +53,7 @@ void client::show_information()
 
         <<  "ID :"       << info.id_   << '\n'
 
-        <<  "Mail :"     << info.email_ << '\n'
+        <<  "Mail :"     << info.mail_ << '\n'
 
         <<  "Address : " << info.addr_ 
          

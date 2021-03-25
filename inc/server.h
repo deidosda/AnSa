@@ -2,13 +2,20 @@
 // Author : Sakhil Kuliev
 //------------------------------------------
 #pragma once
-#ifndef SERVER_H_
-#define SERVER_H_
+#ifndef SERVER_H
+#define SERVER_H
 //------------------------------------------
+// Standart Library Including
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <fstream>
 //------------------------------------------
+// Internal including
+#include "..\inc\network.h"
+#include "..\inc\client.h"
+//------------------------------------------
+// External Library including
 #include <boost/asio.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/bind.hpp>
@@ -34,9 +41,13 @@ public:
     ~server();
     //------------------------------------------
     void set_connection();
+    void save_data(client& user);
     //------------------------------------------
     Status status_;
     Server_status serv_status_;
+    std::fstream db;
+    static int users_count;
 };
-#endif SERVER_H_
+
+#endif SERVER_H
 //------------------------------------------

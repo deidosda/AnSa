@@ -25,18 +25,18 @@ int main() {
 
     //std::cout << static_cast<int>(serv.serv_status_) << std::endl; ;// TEST
 
-    server serv();
+    server serv;
 
     user_data user
     {
         .name_ = {"Sakhil"},
         .id_ = 1,
-        .email_ = {"ses@inbox.ru"},
-        .addr_ = {"192.168.0.1" },
+        .mail_ = {"ses@inbox.ru"},
+        .addr_ = {"191.168.0.1" },
     };
 
     client demon(user);
     demon.show_information();
-    
+    serv.save_data(demon);
 }
 //------------------------------------------

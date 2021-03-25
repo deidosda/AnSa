@@ -19,10 +19,17 @@
 #include <boost/bind/bind.hpp>
 //------------------------------------------ 
 struct user_data
-{
+{   
+    /*
+     * name_ - client current name
+     * id_   - client current id
+     * arrd_ - client current address
+     * mail_ - client current mail
+    */
+
     std::string     name_;
-    uint16_t         id_;
-    std::string     email_;
+    uint16_t        id_;
+    std::string     mail_;
     std::string     addr_;
 };
 
@@ -36,12 +43,6 @@ public:
     void server_connect();
     void send_request();        
     void show_information(); 
-    //------------------------------------------
-    /*
-     * name_ - client current name
-     * id_   - client current id
-     * arrd_ - client current address
-    */
     //------------------------------------------
     user_data info;
 };

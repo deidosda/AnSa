@@ -11,4 +11,7 @@
     <ClInclude Include="inc\server.h" />
     <ClInclude Include="inc\client.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Database\database.txt" />
+  </ItemGroup>
 </Project>

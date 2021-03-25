@@ -151,6 +151,9 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="test\test_network.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Database\database.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

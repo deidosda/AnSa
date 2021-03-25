@@ -21,12 +21,12 @@
 struct user_data
 {   
     /*
-     * name_ - client current name
-     * id_   - client current id
-     * mail_ - client current mail
-     * arrd_ - client current ip address
+     *@parm name_ - client current name
+     * @id_   - client current id
+     * @mail_ - client current mail
+     * @addr_ - client current ip address
+     * @
     */
-
     std::string     name_;
     uint16_t        id_;
     std::string     mail_;

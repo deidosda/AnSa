@@ -9,7 +9,8 @@
 #include <fstream>
 //------------------------------------------
 // External Library including
-#include <boost/bind/bind.hpp>
+#include <boost/asio/ts/buffer.hpp>
+#include <boost/asio/ts/internet.hpp>
 //------------------------------------------
 server::server()
 {

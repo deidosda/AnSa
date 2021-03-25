@@ -5,11 +5,13 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\server.cpp" />
     <ClCompile Include="src\client.cpp" />
+    <ClCompile Include="src\network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\network.h" />
     <ClInclude Include="inc\server.h" />
     <ClInclude Include="inc\client.h" />
+    <ClInclude Include="inc\network_messages.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Database\database.txt" />

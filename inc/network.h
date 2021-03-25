@@ -1,46 +1,54 @@
 //------------------------------------------
 // Author : Sakhil Kuliev
 //------------------------------------------
+// Preprocessor directives
 #pragma once
+#ifndef NETWORK_H
+#define NETWORK_H
+
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0601
+#endif _WIN32_WINNT
+#define ASIO_STANDALONE
 //------------------------------------------
+// Standart Libray Including
 #include <iostream>
+#include <mutex>
+#include <thread>
+#include <chrono>
+#include <queue>
+#include <cstdint>
+#include <optional>
+#include <algorithm>
+#include <vector>
+#include <memory>
 //------------------------------------------
+// External Library Including
 #include <boost/asio.hpp>
-#include <boost/date_time/posix_time/posix_time.hpp>
-#include <boost/bind.hpp>
+#include <boost/asio/ts/buffer.hpp>
+#include <boost/asio/ts/internet.hpp>
 //------------------------------------------
-// namespace typedef`s
-namespace net = boost::asio;
-//------------------------------------------
-class printer
+/*
+struct net
 {
-public:
-    printer(net::io_service& io)
-        : timer_(io, boost::posix_time::seconds(1)),
-        count_(0)
-    {
-        timer_.async_wait(boost::bind(&printer::print, this));
-    }
-
-    ~printer()
-    {
-        std::cout << "Final count is " << count_ << std::endl;
-    }
-
-    void print()
-    {
-        if (count_ < 5)
-        {
-            std::cout << count_ << std::endl;
-            ++count_;
-
-            timer_.expires_at(timer_.expires_at() + boost::posix_time::seconds(1));
-            timer_.async_wait(boost::bind(&printer::print, this));
-        }
-    }
-
-private:
-    net::deadline_timer timer_;
-    int count_;
+    std::string r_ip_addr{};
+    unsigned short port{};
+    boost::asio::ip::tcp::endpoint endpointer;
+    boost::asio::ip::tcp::socket socket;
+    boost::system::error_code ec;
 };
+*/
 //------------------------------------------
+/*
+class network {
+public:
+    network();
+    ~network();
+
+    bool check_address(net &c_net);
+    net c_net;
+    boost::asio::io_service service;
+};
+*/
+//------------------------------------------
+#endif NETWORK_H

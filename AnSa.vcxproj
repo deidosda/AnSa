@@ -143,9 +143,11 @@
   <ItemGroup>
     <ClInclude Include="inc\client.h" />
     <ClInclude Include="inc\network.h" />
+    <ClInclude Include="inc\network_messages.h" />
     <ClInclude Include="inc\server.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\network.cpp" />
     <ClCompile Include="src\client.cpp" />
     <ClCompile Include="src\server.cpp" />
     <ClCompile Include="src\main.cpp" />

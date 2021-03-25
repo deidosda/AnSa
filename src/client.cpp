@@ -28,7 +28,7 @@ client::~client()
  * In this function we send data about our client to the server and later it will be in the database.
  * client & user - is a reference to an object of type client
 */
-void client::server_connect(client &user)
+void client::server_connect()
 {
 
 }
@@ -45,15 +45,17 @@ void client::send_request()
 * In this function, we retrieve data from the server and display them to our user.
 * client & user - is a reference to an object of type client
 */
-void client::show_information(client &user)
+void client::show_information()
 {
     std::cout
 
-        << "Name : " << user.info.name_ << '\n'
+        <<  "Name : "    << info.name_ << '\n'
 
-        <<"ID :" << user.info.id_ << '\n'
+        <<  "ID :"       << info.id_   << '\n'
 
-        << "Address : " << user.info.addr_ 
+        <<  "Mail :"     << info.email_ << '\n'
+
+        <<  "Address : " << info.addr_ 
          
    << std::endl;
 }

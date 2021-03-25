@@ -21,15 +21,22 @@ int main() {
     /*net::io_service io;
     printer p(io);
     io.run();*/
-    
-    server serv;
-    std::cout << static_cast<int>(serv.status_) << std::endl; ;// TEST
+    //Server_status s_stat; // Enum class of server status
 
-    std::string names("sakhil");
-    uint8_t id{ 01 };
-    std::string addr{ "192.168.0.1" };
+    //std::cout << static_cast<int>(serv.serv_status_) << std::endl; ;// TEST
 
-    client user(names, id, addr);
+    server serv();
+
+    user_data user
+    {
+        .name_ = {"Sakhil"},
+        .id_ = 1,
+        .email_ = {"ses@inbox.ru"},
+        .addr_ = {"192.168.0.1" },
+    };
+
+    client demon(user);
+    demon.show_information();
     
 }
 //------------------------------------------

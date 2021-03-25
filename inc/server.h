@@ -21,15 +21,22 @@ enum class Status {
     GET = 4,
 };
 
+enum class Server_status {
+    WORK            = 0,
+    SLEEP           = 1,
+    TO_SOMETHING    = 2
+};
+//------------------------------------------
 class server {
 public:
+    //------------------------------------------
     server();
     ~server();
-
+    //------------------------------------------
     void set_connection();
-    
+    //------------------------------------------
     Status status_;
-
+    Server_status serv_status_;
 };
 #endif SERVER_H_
 //------------------------------------------

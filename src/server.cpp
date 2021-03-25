@@ -10,14 +10,16 @@
 // External Library including
 #include <boost/bind/bind.hpp>
 //------------------------------------------
-server::server() : status_{Status::NEW}
+server::server()
 {
-    std::cout << "Success!" << std::endl;
+    std::cout << "Server is created!" << std::endl;
+    server::serv_status_ = Server_status::WORK;
 }
 //------------------------------------------
 server::~server()
 {
     std::cout << "Server is closed" << std::endl;
+    server::serv_status_ = Server_status::SLEEP;
 }
 void server::set_connection()
 {

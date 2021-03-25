@@ -21,7 +21,7 @@
 struct user_data
 {
     std::string     name_;
-    uint8_t         id_;
+    uint16_t         id_;
     std::string     email_;
     std::string     addr_;
 };
@@ -29,14 +29,13 @@ struct user_data
 class client
 {
 public:
+    //------------------------------------------
     client(user_data u);;
     ~client();
-
-    void server_connect(client &user);
+    //------------------------------------------
+    void server_connect();
     void send_request();        
-    void show_information(client &user); 
-
-
+    void show_information(); 
     //------------------------------------------
     /*
      * name_ - client current name

@@ -1,0 +1,4 @@
+language: c++
+gcc:
+- 9.1.0
+- MSVC
